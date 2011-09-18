@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		490386811423729800CF56BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490386801423729800CF56BF /* UIKit.framework */; };
+		490386831423729800CF56BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490386821423729800CF56BF /* Foundation.framework */; };
+		490386851423729800CF56BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490386841423729800CF56BF /* CoreGraphics.framework */; };
+		4903868B1423729800CF56BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 490386891423729800CF56BF /* InfoPlist.strings */; };
+		4903868D1423729800CF56BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4903868C1423729800CF56BF /* main.m */; };
+		490386911423729800CF56BF /* TrafficLightAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 490386901423729800CF56BF /* TrafficLightAppDelegate.m */; };
+		490386941423729800CF56BF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490386921423729800CF56BF /* MainWindow.xib */; };
+		490386971423729800CF56BF /* TrafficLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490386961423729800CF56BF /* TrafficLightViewController.m */; };
+		4903869A1423729800CF56BF /* TrafficLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490386981423729800CF56BF /* TrafficLightViewController.xib */; };
+		490386AC1423F13900CF56BF /* lens.png in Resources */ = {isa = PBXBuildFile; fileRef = 490386AB1423F13900CF56BF /* lens.png */; };
+		49FD3F701424C68D00277348 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FD3F6F1424C68D00277348 /* Icon-72.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4903867C1423729800CF56BF /* TrafficLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		490386801423729800CF56BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		490386821423729800CF56BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		490386841423729800CF56BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		490386881423729800CF56BF /* TrafficLight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrafficLight-Info.plist"; sourceTree = "<group>"; };
+		4903868A1423729800CF56BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4903868C1423729800CF56BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4903868E1423729800CF56BF /* TrafficLight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrafficLight-Prefix.pch"; sourceTree = "<group>"; };
+		4903868F1423729800CF56BF /* TrafficLightAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrafficLightAppDelegate.h; sourceTree = "<group>"; };
+		490386901423729800CF56BF /* TrafficLightAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficLightAppDelegate.m; sourceTree = "<group>"; };
+		490386931423729800CF56BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		490386951423729800CF56BF /* TrafficLightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrafficLightViewController.h; sourceTree = "<group>"; };
+		490386961423729800CF56BF /* TrafficLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficLightViewController.m; sourceTree = "<group>"; };
+		490386991423729800CF56BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TrafficLightViewController.xib; sourceTree = "<group>"; };
+		490386AB1423F13900CF56BF /* lens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lens.png; sourceTree = "<group>"; };
+		49FD3F6F1424C68D00277348 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		490386791423729800CF56BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				490386811423729800CF56BF /* UIKit.framework in Frameworks */,
+				490386831423729800CF56BF /* Foundation.framework in Frameworks */,
+				490386851423729800CF56BF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		490386711423729700CF56BF = {
+			isa = PBXGroup;
+			children = (
+				490386861423729800CF56BF /* TrafficLight */,
+				4903867F1423729800CF56BF /* Frameworks */,
+				4903867D1423729800CF56BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4903867D1423729800CF56BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4903867C1423729800CF56BF /* TrafficLight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4903867F1423729800CF56BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				490386801423729800CF56BF /* UIKit.framework */,
+				490386821423729800CF56BF /* Foundation.framework */,
+				490386841423729800CF56BF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		490386861423729800CF56BF /* TrafficLight */ = {
+			isa = PBXGroup;
+			children = (
+				4903868F1423729800CF56BF /* TrafficLightAppDelegate.h */,
+				490386901423729800CF56BF /* TrafficLightAppDelegate.m */,
+				490386921423729800CF56BF /* MainWindow.xib */,
+				490386951423729800CF56BF /* TrafficLightViewController.h */,
+				490386961423729800CF56BF /* TrafficLightViewController.m */,
+				490386981423729800CF56BF /* TrafficLightViewController.xib */,
+				490386871423729800CF56BF /* Supporting Files */,
+			);
+			path = TrafficLight;
+			sourceTree = "<group>";
+		};
+		490386871423729800CF56BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49FD3F6F1424C68D00277348 /* Icon-72.png */,
+				490386AB1423F13900CF56BF /* lens.png */,
+				490386881423729800CF56BF /* TrafficLight-Info.plist */,
+				490386891423729800CF56BF /* InfoPlist.strings */,
+				4903868C1423729800CF56BF /* main.m */,
+				4903868E1423729800CF56BF /* TrafficLight-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4903867B1423729800CF56BF /* TrafficLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4903869D1423729800CF56BF /* Build configuration list for PBXNativeTarget "TrafficLight" */;
+			buildPhases = (
+				490386781423729800CF56BF /* Sources */,
+				490386791423729800CF56BF /* Frameworks */,
+				4903867A1423729800CF56BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrafficLight;
+			productName = TrafficLight;
+			productReference = 4903867C1423729800CF56BF /* TrafficLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		490386731423729700CF56BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Unsolicited Code";
+			};
+			buildConfigurationList = 490386761423729700CF56BF /* Build configuration list for PBXProject "TrafficLight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 490386711423729700CF56BF;
+			productRefGroup = 4903867D1423729800CF56BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4903867B1423729800CF56BF /* TrafficLight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4903867A1423729800CF56BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4903868B1423729800CF56BF /* InfoPlist.strings in Resources */,
+				490386941423729800CF56BF /* MainWindow.xib in Resources */,
+				4903869A1423729800CF56BF /* TrafficLightViewController.xib in Resources */,
+				490386AC1423F13900CF56BF /* lens.png in Resources */,
+				49FD3F701424C68D00277348 /* Icon-72.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		490386781423729800CF56BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4903868D1423729800CF56BF /* main.m in Sources */,
+				490386911423729800CF56BF /* TrafficLightAppDelegate.m in Sources */,
+				490386971423729800CF56BF /* TrafficLightViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		490386891423729800CF56BF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4903868A1423729800CF56BF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		490386921423729800CF56BF /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				490386931423729800CF56BF /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		490386981423729800CF56BF /* TrafficLightViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				490386991423729800CF56BF /* en */,
+			);
+			name = TrafficLightViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4903869B1423729800CF56BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		4903869C1423729800CF56BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4903869E1423729800CF56BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrafficLight/TrafficLight-Prefix.pch";
+				INFOPLIST_FILE = "TrafficLight/TrafficLight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4903869F1423729800CF56BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrafficLight/TrafficLight-Prefix.pch";
+				INFOPLIST_FILE = "TrafficLight/TrafficLight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		490386761423729700CF56BF /* Build configuration list for PBXProject "TrafficLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4903869B1423729800CF56BF /* Debug */,
+				4903869C1423729800CF56BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4903869D1423729800CF56BF /* Build configuration list for PBXNativeTarget "TrafficLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4903869E1423729800CF56BF /* Debug */,
+				4903869F1423729800CF56BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 490386731423729700CF56BF /* Project object */;
+}
