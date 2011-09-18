@@ -7,16 +7,44 @@
 //
 
 #import "TrafficLightViewController.h"
+#import <QuartzCore/CoreAnimation.h>
+
+@interface TrafficLightViewController ()
+@property (nonatomic,retain) CALayer* backgroundLayer;
+@end
 
 @implementation TrafficLightViewController
+
+@synthesize backgroundLayer = _backgroundLayer;
+
+- (void)dealloc {
+    self.backgroundLayer = nil;
+    [super dealloc];
+}
     
 #pragma mark - View lifecycle
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-//- (void)viewDidLoad
-//{
-//    [super viewDidLoad];
-//}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    CALayer* backgroundLayer = [CALayer layer];
+    backgroundLayer.backgroundColor = [[UIColor blackColor] CGColor];
+    
+    [self.view.layer addSublayer:backgroundLayer];
+    
+    self.backgroundLayer = backgroundLayer;
+    
+    [self.view addGestureRecognizer:
+     [[[UITapGestureRecognizer alloc]
+       initWithTarget:self action:@selector(tapped)]
+      autorelease]];
+}
+
+- (void)tapped {
+    self.backgroundLayer.frame = self.view.bounds;
+}
 
 - (void)viewDidUnload
 {
