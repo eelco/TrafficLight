@@ -18,6 +18,7 @@
 		4903869A1423729800CF56BF /* TrafficLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490386981423729800CF56BF /* TrafficLightViewController.xib */; };
 		490386AC1423F13900CF56BF /* lens.png in Resources */ = {isa = PBXBuildFile; fileRef = 490386AB1423F13900CF56BF /* lens.png */; };
 		49FD3F701424C68D00277348 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FD3F6F1424C68D00277348 /* Icon-72.png */; };
+		49FD3FB314268B0E00277348 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FD3FB214268B0E00277348 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		490386991423729800CF56BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TrafficLightViewController.xib; sourceTree = "<group>"; };
 		490386AB1423F13900CF56BF /* lens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lens.png; sourceTree = "<group>"; };
 		49FD3F6F1424C68D00277348 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		49FD3FB214268B0E00277348 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49FD3FB314268B0E00277348 /* QuartzCore.framework in Frameworks */,
 				490386811423729800CF56BF /* UIKit.framework in Frameworks */,
 				490386831423729800CF56BF /* Foundation.framework in Frameworks */,
 				490386851423729800CF56BF /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +76,7 @@
 		4903867F1423729800CF56BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49FD3FB214268B0E00277348 /* QuartzCore.framework */,
 				490386801423729800CF56BF /* UIKit.framework */,
 				490386821423729800CF56BF /* Foundation.framework */,
 				490386841423729800CF56BF /* CoreGraphics.framework */,
