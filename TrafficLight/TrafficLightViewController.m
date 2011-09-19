@@ -49,7 +49,33 @@
 }
 
 - (void)tapped {
-    self.backgroundLayer.frame = self.view.bounds;
+    CABasicAnimation* animation = [CABasicAnimation 
+                                   animationWithKeyPath:@"transform"];
+
+    NSNumber* fromValue = [self.backgroundLayer.presentationLayer 
+                           valueForKeyPath:@"transform.rotation.x"];
+    if (fromValue == nil) {
+        fromValue = [NSNumber numberWithDouble:0.0f];
+    }
+    animation.fromValue = fromValue;
+    
+    static BOOL toggler = YES;
+    if (toggler) {
+        animation.toValue   = [NSNumber numberWithDouble:M_PI / 2];
+    } else {
+        animation.toValue   = [NSNumber numberWithDouble:0.0f];
+    }
+    toggler = !toggler;
+    
+    animation.valueFunction = [CAValueFunction 
+                               functionWithName:kCAValueFunctionRotateX];
+    animation.duration  = 1.0f;
+    
+    [self.backgroundLayer setValue:animation.toValue 
+                        forKeyPath:@"transform.rotation.x"];
+    
+    [self.backgroundLayer removeAnimationForKey:@"flip"];
+    [self.backgroundLayer addAnimation:animation forKey:@"flip"];
 }
 
 - (void)viewDidUnload
