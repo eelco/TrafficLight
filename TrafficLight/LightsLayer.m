@@ -24,6 +24,9 @@
 - (CALayer*)lightLayer {
     CALayer* layer = [CALayer layer];
     layer.backgroundColor = [[UIColor darkGrayColor] CGColor];
+    layer.contents = (id)[UIImage imageNamed:@"lens.png"].CGImage;    
+    layer.shadowColor = [[UIColor yellowColor] CGColor];
+    layer.shadowOffset = CGSizeZero;
     return layer;
 }
 
@@ -51,10 +54,12 @@
         color = [UIColor greenColor];
     }
     
+    lightLayer.shadowOpacity = 0.8;    
     lightLayer.backgroundColor = [color CGColor];    
 }
 
 - (void)turnOff:(CALayer*)lightLayer {
+    lightLayer.shadowOpacity = 0;
     lightLayer.backgroundColor = [[UIColor darkGrayColor] CGColor];
 }
 
@@ -139,6 +144,10 @@
     self.redLight.cornerRadius    = lightHeightWidth / 2;
     self.orangeLight.cornerRadius = lightHeightWidth / 2;
     self.greenLight.cornerRadius  = lightHeightWidth / 2;
+    
+    self.redLight.shadowRadius    = lightHeightWidth / 5;
+    self.orangeLight.shadowRadius = lightHeightWidth / 5;
+    self.greenLight.shadowRadius  = lightHeightWidth / 5;
     
     self.redLight.frame    = CGRectMake(lightInsetX, lightInsetY, 
                                         lightHeightWidth, lightHeightWidth);
