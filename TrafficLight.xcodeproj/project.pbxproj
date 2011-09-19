@@ -17,6 +17,7 @@
 		490386971423729800CF56BF /* TrafficLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490386961423729800CF56BF /* TrafficLightViewController.m */; };
 		4903869A1423729800CF56BF /* TrafficLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490386981423729800CF56BF /* TrafficLightViewController.xib */; };
 		490386AC1423F13900CF56BF /* lens.png in Resources */ = {isa = PBXBuildFile; fileRef = 490386AB1423F13900CF56BF /* lens.png */; };
+		49BA09021427D04900E5FC2C /* LightsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BA09011427D04900E5FC2C /* LightsLayer.m */; };
 		49FD3F701424C68D00277348 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FD3F6F1424C68D00277348 /* Icon-72.png */; };
 		49FD3FB314268B0E00277348 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FD3FB214268B0E00277348 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,8 @@
 		490386961423729800CF56BF /* TrafficLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficLightViewController.m; sourceTree = "<group>"; };
 		490386991423729800CF56BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TrafficLightViewController.xib; sourceTree = "<group>"; };
 		490386AB1423F13900CF56BF /* lens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lens.png; sourceTree = "<group>"; };
+		49BA09001427D04900E5FC2C /* LightsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightsLayer.h; sourceTree = "<group>"; };
+		49BA09011427D04900E5FC2C /* LightsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightsLayer.m; sourceTree = "<group>"; };
 		49FD3F6F1424C68D00277348 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		49FD3FB214268B0E00277348 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -94,6 +97,8 @@
 				490386961423729800CF56BF /* TrafficLightViewController.m */,
 				490386981423729800CF56BF /* TrafficLightViewController.xib */,
 				490386871423729800CF56BF /* Supporting Files */,
+				49BA09001427D04900E5FC2C /* LightsLayer.h */,
+				49BA09011427D04900E5FC2C /* LightsLayer.m */,
 			);
 			path = TrafficLight;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				4903868D1423729800CF56BF /* main.m in Sources */,
 				490386911423729800CF56BF /* TrafficLightAppDelegate.m in Sources */,
 				490386971423729800CF56BF /* TrafficLightViewController.m in Sources */,
+				49BA09021427D04900E5FC2C /* LightsLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

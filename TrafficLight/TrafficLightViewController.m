@@ -8,17 +8,21 @@
 
 #import "TrafficLightViewController.h"
 #import <QuartzCore/CoreAnimation.h>
+#import "LightsLayer.h"
 
 @interface TrafficLightViewController ()
 @property (nonatomic,retain) CALayer* backgroundLayer;
+@property (nonatomic,retain) LightsLayer* lightsLayer;
 @end
 
 @implementation TrafficLightViewController
 
 @synthesize backgroundLayer = _backgroundLayer;
+@synthesize lightsLayer     = _lightsLayer;
 
 - (void)dealloc {
     self.backgroundLayer = nil;
+    self.lightsLayer = nil;
     [super dealloc];
 }
     
@@ -41,6 +45,13 @@
     [self.view.layer addSublayer:backgroundLayer];
     
     self.backgroundLayer = backgroundLayer;
+    
+    LightsLayer* lightsLayer = [LightsLayer layer];
+    lightsLayer.frame = CGRectInset(backgroundLayer.bounds, 20, 100);
+    
+    [backgroundLayer addSublayer:lightsLayer];
+
+    self.lightsLayer = lightsLayer;
     
     [self.view addGestureRecognizer:
      [[[UITapGestureRecognizer alloc]
