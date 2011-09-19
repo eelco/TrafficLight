@@ -19,6 +19,7 @@
 @dynamic redLight;
 @dynamic orangeLight;
 @dynamic greenLight;
+@synthesize state = _state;
 
 - (CALayer*)lightLayer {
     CALayer* layer = [CALayer layer];
@@ -38,6 +39,90 @@
         [self addSublayer:self.greenLight];
     }    
     return self;
+}
+
+- (void)turnOn:(CALayer*)lightLayer {
+    UIColor* color = nil;
+    if (lightLayer == self.redLight) {
+        color = [UIColor redColor];
+    } else if (lightLayer == self.orangeLight) {
+        color = [UIColor orangeColor];
+    } else if (lightLayer == self.greenLight) {
+        color = [UIColor greenColor];
+    }
+    
+    lightLayer.backgroundColor = [color CGColor];    
+}
+
+- (void)turnOff:(CALayer*)lightLayer {
+    lightLayer.backgroundColor = [[UIColor darkGrayColor] CGColor];
+}
+
++ (BOOL)needsDisplayForKey:(NSString *)key {
+    return [key isEqualToString:@"state"]
+        || [super needsDisplayForKey:key];
+}
+
+- (void)setState:(LightsLayerState)state {
+    if (state == LightsLayerStateOff) {
+        [self turnOff:self.redLight];
+        [self turnOff:self.orangeLight];
+        [self turnOff:self.greenLight];
+    } else if (state == LightsLayerStateGo) {
+        [self turnOff:self.redLight];
+        [self turnOff:self.orangeLight];
+        [self turnOn:self.greenLight];
+    } else if (state == LightsLayerStateHurry) { 
+        [self turnOff:self.redLight];
+        [self turnOn:self.orangeLight];
+        [self turnOff:self.greenLight];
+    } else if (state == LightsLayerStateStop) {
+        [self turnOn:self.redLight];
+        [self turnOff:self.orangeLight];
+        [self turnOff:self.greenLight];
+    }
+    _state = state;
+}
+
+- (void)hurryStop:(NSTimeInterval)duration {
+    [self setState:LightsLayerStateStop];
+    
+    CAKeyframeAnimation* lightAnimation = [CAKeyframeAnimation 
+                                           animationWithKeyPath:@"backgroundColor"];
+    lightAnimation.duration = duration;
+    lightAnimation.keyTimes = [NSArray arrayWithObjects:
+                               [NSNumber numberWithFloat:0.0], 
+                               [NSNumber numberWithFloat:0.1],
+                               [NSNumber numberWithFloat:0.9],
+                               [NSNumber numberWithFloat:1.0], 
+                               nil];
+   
+    lightAnimation.values = [NSArray arrayWithObjects:
+                             (id)[[UIColor darkGrayColor] CGColor], 
+                             (id)[[UIColor orangeColor] CGColor],
+                             (id)[[UIColor orangeColor] CGColor],
+                             (id)[[UIColor darkGrayColor] CGColor], 
+                             nil];
+    
+    [self.orangeLight addAnimation:lightAnimation forKey:nil];
+    
+    lightAnimation.values = [NSArray arrayWithObjects:
+                             (id)[[UIColor greenColor] CGColor], 
+                             (id)[[UIColor darkGrayColor] CGColor],
+                             (id)[[UIColor darkGrayColor] CGColor],
+                             (id)[[UIColor darkGrayColor] CGColor],
+                             nil];
+    
+    [self.greenLight addAnimation:lightAnimation forKey:nil];
+    
+    lightAnimation.values = [NSArray arrayWithObjects:
+                             (id)[[UIColor darkGrayColor] CGColor], 
+                             (id)[[UIColor darkGrayColor] CGColor],
+                             (id)[[UIColor darkGrayColor] CGColor],
+                             (id)[[UIColor redColor] CGColor], 
+                             nil];
+    
+    [self.redLight addAnimation:lightAnimation forKey:nil];    
 }
 
 - (void)layoutSublayers {

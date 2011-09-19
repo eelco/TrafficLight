@@ -48,6 +48,7 @@
     
     LightsLayer* lightsLayer = [LightsLayer layer];
     lightsLayer.frame = CGRectInset(backgroundLayer.bounds, 20, 100);
+    [lightsLayer setState:LightsLayerStateGo];
     
     [backgroundLayer addSublayer:lightsLayer];
 
@@ -60,33 +61,23 @@
 }
 
 - (void)tapped {
-    CABasicAnimation* animation = [CABasicAnimation 
-                                   animationWithKeyPath:@"transform"];
-
-    NSNumber* fromValue = [self.backgroundLayer.presentationLayer 
-                           valueForKeyPath:@"transform.rotation.x"];
-    if (fromValue == nil) {
-        fromValue = [NSNumber numberWithDouble:0.0f];
-    }
-    animation.fromValue = fromValue;
-    
+    [self.lightsLayer removeAllAnimations];
     static BOOL toggler = YES;
     if (toggler) {
-        animation.toValue   = [NSNumber numberWithDouble:M_PI / 2];
+        CAKeyframeAnimation* animation = [CAKeyframeAnimation 
+                                          animationWithKeyPath:@"state"];
+        
+        animation.values = [NSArray arrayWithObjects:
+                            [NSNumber numberWithInt:LightsLayerStateHurry],
+                            [NSNumber numberWithInt:LightsLayerStateStop], 
+                            nil];
+        animation.calculationMode = kCAAnimationDiscrete;
+        animation.duration = 3;
+        [self.lightsLayer addAnimation:animation forKey:nil];    
     } else {
-        animation.toValue   = [NSNumber numberWithDouble:0.0f];
+        [self.lightsLayer setState:LightsLayerStateGo];
     }
     toggler = !toggler;
-    
-    animation.valueFunction = [CAValueFunction 
-                               functionWithName:kCAValueFunctionRotateX];
-    animation.duration  = 1.0f;
-    
-    [self.backgroundLayer setValue:animation.toValue 
-                        forKeyPath:@"transform.rotation.x"];
-    
-    [self.backgroundLayer removeAnimationForKey:@"flip"];
-    [self.backgroundLayer addAnimation:animation forKey:@"flip"];
 }
 
 - (void)viewDidUnload

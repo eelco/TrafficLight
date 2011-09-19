@@ -8,6 +8,16 @@
 
 #import <QuartzCore/CoreAnimation.h>
 
+typedef enum {
+    LightsLayerStateOff,
+    LightsLayerStateGo,
+    LightsLayerStateHurry,
+    LightsLayerStateStop
+} LightsLayerState;
+
 @interface LightsLayer : CALayer
+@property (nonatomic,assign) LightsLayerState state;
+
+- (void)hurryStop:(NSTimeInterval)duration;
 
 @end
