@@ -29,8 +29,14 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor blackColor];
+    
     CALayer* backgroundLayer = [CALayer layer];
+    backgroundLayer.frame = CGRectInset(self.view.bounds, 100, 50);
     backgroundLayer.backgroundColor = [[UIColor blackColor] CGColor];
+    backgroundLayer.borderColor = [[UIColor whiteColor] CGColor];
+    backgroundLayer.borderWidth = 25;
+    backgroundLayer.cornerRadius = backgroundLayer.frame.size.width / 2;
     
     [self.view.layer addSublayer:backgroundLayer];
     
